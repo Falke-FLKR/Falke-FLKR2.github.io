@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi sitio morado</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+
+  <style>
+    :root{
+      --bs-primary: #7c3aed;                 
+      --bs-primary-rgb: 124,58,237;
+      --bs-dark: #1a1030;                 
+      --bs-dark-rgb: 26,16,48;
+      --morado-900: #2b0b63;
+      --morado-800: #3b1a78;
+      --morado-700: #5b21b6;
+      --morado-600: #7c3aed;
+      --morado-500: #a855f7;
+    } /* <-- faltaba este cierre */
+
+    .bg-deep-purple{
+      background-color: var(--bs-dark) !important;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .btn-primary{
+      background-color: var(--bs-primary);
+      border-color: var(--bs-primary);
+    }
+    .btn-primary:hover{
+      background-color: #6d28d9;
+      border-color: #6d28d9;
+    }
+    .link-primary{ color: var(--bs-primary) !important; }
+
+    /* Encabezado con degradado morado */
+    .hero-purple{
+      background-image: linear-gradient(135deg, var(--morado-700), var(--morado-500));
+      color:#fff;
+    }
+
+    /* Tarjetas: borde y sombra sutil morada */
+    .card{
+      border: 1px solid rgba(124,58,237,.15);
+      box-shadow: 0 8px 20px rgba(124,58,237,.12);
+    }
+
+    /* Footer */
+    .footer-purple{
+      background-color: var(--morado-900);
+      color:#fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-deep-purple">
+    <div class="container">
+      <a href="#" class="navbar-brand fw-bold">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero-purple text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Bienvenidos a mi web</h1>
+      <p class="lead mb-3">Sitio Freelancer Personal</p>
+      <a href="#sobre" class="btn btn-light btn-lg mt-1">Ver más</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container my-5">
+
+    <!-- Sobre -->
+    <section id="sobre" class="mb-5">
+      <h2 class="text-center mb-4">Sobre mí</h2>
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <img class="img-fluid rounded shadow" src="https://upload.wikimedia.org/wikipedia/commons/0/03/Twitter_default_profile_400x400.png" alt="Foto de perfil">
+        </div>
+        <div class="col-md-6">
+          <p>
+            Estudiante de la Universidad Católica, campus San Isidro. Estudiando Ingeniería en Ciencias de la Computación.
+          </p>
+          <a href="#" class="link-primary">Conoce más →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artículos -->
+    <section id="Proyectos">
+      <h2 class="text-center mb-4">Proyectos</h2>
+      <div class="row g-4">
+        <article class="col-md-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="https://i.ytimg.com/vi/SBOdGG4sx4w/maxresdefault.jpg" alt="lego mindstorm rubik's cube solver">
+            <div class="card-body">
+              <h5 class="card-title">lego mindstorm rubik's cube solver</h5>
+              <p class="card-text">Robot hecho con lego mindstorm que resuelve cubo's rubiks</p>
+              <a class="btn btn-primary" href="#">Ver más</a>
+            </div>
+          </div>
+        </article>
+        <article class="col-md-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="https://cdna.pcpartpicker.com/static/forever/images/userbuild/457406.171c4a4b55693d79e2444525ceda4301.1600.jpg" alt="Custom PC">
+            <div class="card-body">
+              <h5 class="card-title">Custom PC</h5>
+              <p class="card-text">Computadora personalisada con partes de eleccion para jugar videojuegos.</p>
+              <a class="btn btn-primary" href="#">Ver más</a>
+            </div>
+          </div>
+        </article>
+        <article class="col-md-4">
+          <div class="card h-100">
+            <img class="card-img-top" src="https://picsum.photos/id/252/600/400" alt="Cámara antigua 3">
+            <div class="card-body">
+              <h5 class="card-title">Cámara Clásica</h5>
+              <p class="card-text">Diseño icónico con resultados nítidos y un encanto atemporal.</p>
+              <a class="btn btn-primary" href="#">Ver más</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-purple text-white text-center py-4">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 MiSitio. Todos los derechos reservados</p>
+      <a class="text-white me-3" href="#">Privacidad</a>
+      <a class="text-white" href="#">Términos</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+          crossorigin="anonymous"></script>
+</body>
+</html>

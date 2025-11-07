@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:100");
+
+
+@-webkit-keyframes bg-scrolling-reverse { 100% { background-position: 50px 50px; } }
+@-moz-keyframes    bg-scrolling-reverse { 100% { background-position: 50px 50px; } }
+@-o-keyframes      bg-scrolling-reverse { 100% { background-position: 50px 50px; } }
+@keyframes         bg-scrolling-reverse { 100% { background-position: 50px 50px; } }
+
+@-webkit-keyframes bg-scrolling { 0% { background-position: 50px 50px; } }
+@-moz-keyframes    bg-scrolling { 0% { background-position: 50px 50px; } }
+@-o-keyframes      bg-scrolling { 0% { background-position: 50px 50px; } }
+@keyframes         bg-scrolling { 0% { background-position: 50px 50px; } }
+
+:root{
+  --bs-primary: #7c3aed;
+  --bs-primary-rgb: 124,58,237;
+  --bs-dark: #1a1030;
+  --bs-dark-rgb: 26,16,48;
+  --morado-900: #2b0b63;
+  --morado-800: #3b1a78;
+  --morado-700: #5b21b6;
+  --morado-600: #7c3aed;
+  --morado-500: #a855f7;
+}
+
+body{
+  font-family: Exo, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.bg-deep-purple{
+  background-color: var(--bs-dark) !important;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.btn-primary{
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+.btn-primary:hover{
+  background-color: #6d28d9;
+  border-color: #6d28d9;
+}
+
+.hero-purple{
+  background-image: linear-gradient(135deg, var(--morado-700), var(--morado-500)),
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat, repeat;
+  background-size: cover, 50px 50px;
+  color:#fff;
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: bg-scrolling-reverse .92s infinite linear;
+          animation: bg-scrolling-reverse .92s infinite linear;
+}
+
+.card{
+  border: 1px solid rgba(124,58,237,.15);
+  box-shadow: 0 8px 20px rgba(124,58,237,.12);
+}
+
+.footer-purple{
+  background-color: var(--morado-900);
+  color:#fff;
+}
+
+@media (max-width: 768px){
+  /* Navegación: enlaces un poco más grandes y espaciados cuando está desplegada */
+  .navbar .nav-link{ font-size: 1rem; padding: .5rem .75rem; }
+
+  /* Header: reduce tamaños */
+  .hero-purple .display-5{ font-size: 2rem; }
+  .hero-purple .lead{ font-size: 1rem; }
+
+  .row.g-4 > [class*="col-"]{ margin-bottom: 1rem; }
+}
+
+@media (max-width: 450px){
+  body{ font-size: 14px; }
+
+  .navbar .navbar-brand{ font-size: 1rem; }
+  .navbar .nav-link{
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:.5rem .75rem;
+    border-radius: .375rem;
+  }
+
+  .hero-purple .display-5{ font-size: 1.6rem; }
+  .hero-purple .lead{ font-size: .95rem; }
+
+  .card .card-text{ font-size: .9rem; }
+  .btn{ width: 100%; }
+}
